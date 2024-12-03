@@ -1,0 +1,6 @@
+{
+    "vehicle_position":{"roll":20,"pitch":-20,"heading":23,"altitude":425,"lon":151.23497,"lat":-33.87059},
+    "verhicle_speed":{"linear":10.2,"climb":10},
+    "vehicle_state":{"s1":255,"s2":100},
+    "vehicle_telemetry":{"batt1":12.2}
+}
