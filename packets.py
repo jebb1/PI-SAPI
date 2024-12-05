@@ -1,4 +1,5 @@
 import datetime
+import json
 
 class ASSPacket:
     def __init__(self, data) -> None:
@@ -12,3 +13,6 @@ class ASSPacketAdxl345(ASSPacket):
         self.x = data.get('x', 0)
         self.y = data.get('y', 0)
         self.z = data.get('z', 0)
+        
+def connectionPacket():
+    return json.loads('{"type":"api","message":"ws_connected","time":-1}')
