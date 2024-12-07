@@ -87,7 +87,7 @@ class SerialProtocol(asyncio.Protocol):
         while b'\n' in self.buffer:
             line, self.buffer = self.buffer.split(b'\n', 1)
             line = line.decode('utf-8', errors='replace').strip()
-            #print(f"Raw Serial Data: {line}")
+            print(f"Raw Serial Data: {line}")
 
             try:
                 json_data = json.loads(line)
@@ -105,7 +105,7 @@ class SerialProtocol(asyncio.Protocol):
 
 async def connect_serial():
     port = "/dev/cu.usbserial-0001"  # Replace with your port
-    baud_rate = 115200
+    baud_rate = 230400
     heartbeat_interval = 1  # Set your heartbeat interval in seconds
 
     while True:
