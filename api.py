@@ -104,7 +104,8 @@ class SerialProtocol(asyncio.Protocol):
         asyncio.create_task(connect_serial())
 
 async def connect_serial():
-    port = "/dev/cu.usbserial-0001"  # Replace with your port
+    #port = "/dev/cu.usbserial-0001"  # Replace with your port FOR MAC
+    port = "/dev/ttyUSB0"  # Replace with your port FOR PI
     baud_rate = 230400
     heartbeat_interval = 1  # Set your heartbeat interval in seconds
 
